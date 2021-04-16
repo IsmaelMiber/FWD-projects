@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Test</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="">Logo</div>
+      <div class="">navigation</div>
+    </header>
+
+    <main>
+      <section>
+        <form class="" onsubmit="return NLPForm.handleSubmit(event)">
+          <input
+            id="textInput"
+            type="text"
+            name="input"
+            value=""
+            placeholder="Enter the paragraph"
+          />
+          <input
+            type="submit"
+            name=""
+            value="submit"
+            onclick="return NLPForm.handleSubmit(event)"
+            onsubmit="return NLPForm.handleSubmit(event)"
+          />
+        </form>
+      </section>
+
+      <section>
+        text:
+        <p id="output"></p>
+        labels:
+        <div id="labels"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>This is a footer</p>
+    </footer>
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("./service-worker.js");
+        });
+      }
+    </script>
+  </body>
+</html>
