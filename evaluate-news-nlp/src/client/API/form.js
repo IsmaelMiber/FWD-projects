@@ -1,16 +1,27 @@
-import API from "../API";
+const API = require("../API");
+const fetch = require("node-fetch");
+const FormData = require("form-data");
 
-export function classifiyText(text) {
-  const formdata = new FormData();
-  formdata.append("key", process.env.MEANING_CLOUD_API_KEY);
-  formdata.append("txt", text);
-  formdata.append("model", "IPTC_en");
+function classifiyText(text) {
+  const form = new FormData();
+  form.append("key", process.env.MEANING_CLOUD_API_KEY);
+  form.append("txt", text);
+  form.append("model", "IPTC_en");
 
   const requestOptions = {
     method: "POST",
-    body: formdata,
+    body: form,
     redirect: "follow",
   };
-
-  return fetch(API.CLASSIFICATION, requestOptions);
+  return fetch("https://api.meaningcloud.com/class-2.0", requestOptions);
 }
+
+function requestClassifationOfText(text) {
+  let url = `${API.CLASSIFYTEXT}?text=${text}`;
+  return fetch(url);
+}
+
+module.exports = {
+  classifiyText,
+  requestClassifationOfText,
+};

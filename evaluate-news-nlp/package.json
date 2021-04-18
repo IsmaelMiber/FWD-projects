@@ -5,7 +5,7 @@
   "scripts": {
     "test": "jest",
     "start": "node src/server/index.js",
-    "build-prod": "webpack --config webpack.prod.js && start",
+    "build-prod": "webpack --config webpack.prod.js && yarn start",
     "build-dev": "webpack serve --config webpack.dev.js --open"
   },
   "keywords": [],
@@ -14,8 +14,10 @@
   "description": "",
   "dependencies": {
     "@babel/runtime": "^7.13.10",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "jest": "^26.6.3",
+    "node-fetch": "^2.6.1",
     "regenerator-runtime": "^0.13.7",
     "webpack": "4.44.2",
     "webpack-cli": "^4.6.0"
@@ -29,7 +31,6 @@
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
     "css-loader": "^5.2.1",
-    "dotenv-webpack": "^7.0.2",
     "html-webpack-plugin": "4",
     "mini-css-extract-plugin": "^1.4.1",
     "node-sass": "^5.0.0",

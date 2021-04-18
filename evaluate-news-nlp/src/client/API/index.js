@@ -1,6 +1,5 @@
-const BASE_URL = "https://api.meaningcloud.com";
-const CLASSIFICATION = `/${BASE_URL}/class-2.0`;
+const CLASSIFICATION = `"https://api.meaningcloud.com"/class-2.0`;
+console.warn(process.env);
+const CLASSIFYTEXT = `http://localhost:${process.env.PORT}/classify`;
 
-export default {
-  CLASSIFICATION,
-};
+module.exports = { CLASSIFICATION, CLASSIFYTEXT };

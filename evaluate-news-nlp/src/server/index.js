@@ -1,5 +1,9 @@
+require("dotenv").config({
+  path: "./.env.prod",
+});
 const path = require("path");
 const open = require("open");
+const { classifiyText } = require("../client/API/form");
 
 const express = require("express");
 const mockAPIResponse = require("./mockAPI.js");
@@ -19,6 +23,15 @@ app.listen(port, function () {
 
 app.get("/test", function (req, res) {
   res.send(mockAPIResponse);
+});
+
+app.get("/classify", async function (req, res, proxyOptions) {
+  const { query } = req;
+  const { text } = query;
+  const response = await classifiyText(text);
+
+  const responseJson = await response.json();
+  res.send(responseJson);
 });
 
 open(`http://localhost:${port}`);
