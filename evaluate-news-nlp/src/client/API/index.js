@@ -1,5 +1,9 @@
+let port = 8081;
+if (process.env.NODE_ENV == "development") {
+  port = 8080;
+}
 const CLASSIFICATION = `"https://api.meaningcloud.com"/class-2.0`;
-console.warn(process.env);
-const CLASSIFYTEXT = `http://localhost:${process.env.PORT}/classify`;
+
+const CLASSIFYTEXT = `http://localhost:${port}/classify`;
 
 module.exports = { CLASSIFICATION, CLASSIFYTEXT };

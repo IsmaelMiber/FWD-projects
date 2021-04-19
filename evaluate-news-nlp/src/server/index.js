@@ -1,6 +1,4 @@
-require("dotenv").config({
-  path: "./.env.prod",
-});
+require("dotenv").config();
 const path = require("path");
 const open = require("open");
 const { classifiyText } = require("../client/API/form");
