@@ -22,3 +22,11 @@ In this project we learn alot of useful things:
 6. to run our project in Development Mode: you will run this command: `npm run build-dev` || `yarn build-dev`
 7. to run our project in Production Mode: you will run this command: `npm run build-prod` || `yarn build-prod`
 8. to run project tests you will run this command `npm run test` || `yarn test`
+
+## NOTE:
+
+Please after running the project and before test any functionality of it, click on open `devtools` then click right on the referesh icon then select:
+
+`Empty Cache and Hard Reloaded`
+
+to remoe any previous version cause as you know the project include service worker that responsable about caching any requested files.
