@@ -19,7 +19,6 @@ function SelectBox(props) {
 
   function onChange(event) {
     const { value } = event.target;
-    console.log(book);
     if (shelf == NONE && value != NONE) {
       state.addBook({ ...book, shelf: value });
     } else if (value == NONE) {
