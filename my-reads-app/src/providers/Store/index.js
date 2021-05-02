@@ -70,7 +70,6 @@ export default class Provider extends React.Component {
         this.setState({ error: books });
       }
     } catch (error) {
-      console.log(error);
       this.setState({ error });
     }
   }
