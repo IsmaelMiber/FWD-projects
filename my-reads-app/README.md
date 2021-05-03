@@ -1,5 +1,19 @@
 # MyReads Project
 
+## Description
+
+This project is about tracking your reads there are three shelfs:
+
+- Currently Read
+- Want to Read
+- Read
+
+Each book appeared has a selectbox to manage the state of it if it is reading, want to read or already read.
+
+Also you can search about any book when navigate to search page.
+
+Books appeared in your search page can be controlled to add them to any shelf from the three above.
+
 ## Setup Project
 
 To get start right away:
