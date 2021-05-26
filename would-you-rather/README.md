@@ -1,4 +1,4 @@
-# MyReads Project
+# Would Your Rather? Project 🤷🏻
 
 ## Description
 
